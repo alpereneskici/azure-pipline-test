@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='site.css') }}" />
+        <title>Hello, Flask</title>
+    </head>
+    <body>
+        {%if name %}
+            <span class="message">Hello there, {{ name }}!</span> It's {{ date.strftime("%A, %d %B, %Y at %X") }}.
+        {% else %}
+            <span class="message">What's your name? Provide it after /hello/ in the URL.</span>
+        {% endif %}
+    </body>
+</html>
+<!-- The above syntax makes use of jinja and it's documentation can be found over here http://jinja.pocoo.org/docs/2.10/templates/ -->
